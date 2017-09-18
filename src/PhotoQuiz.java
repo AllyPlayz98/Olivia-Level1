@@ -48,7 +48,7 @@ quizWindow.add(a);
 		// 12. pack the quiz window
 quizWindow.pack();
 		// 13. ask another question
-String aa2 = "Is this Avatar Aang?";
+String aa2 = JOptionPane.showInputDialog("Is this Avatar Aang?");
 		// 14+ check answer, say if correct or incorrect, etc.
 if (aa2.equals("Yes")) {
 	JOptionPane.showMessageDialog(null, "Yep, thats the greatist avatar of all time!");
