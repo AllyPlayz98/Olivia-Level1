@@ -28,8 +28,4 @@ public class Cat {
 			System.out.println("DEAD CAT :(");
 	}
 
-	
 }
-
-
-

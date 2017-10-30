@@ -4,18 +4,18 @@ public class BakingCookies {
 	public static void main(String[] args) {
 
 		/* Figure out how to bake cookies using the classes below */
-CookieType type = new CookieType (CookieType.MACADAMIA_NUT);
-MixingBowl bowl = new MixingBowl();
-bowl.addButter();
-bowl.addFlour();
-bowl.addSugar();
-bowl.mixIngredients();
-Oven o = new Oven();
-o.turnOn();
-o.putBatterInOven();
-o.isHot();
-o.isBaking();
-bowl.eatCookie(type, o);
+		CookieType type = new CookieType(CookieType.MACADAMIA_NUT);
+		MixingBowl bowl = new MixingBowl();
+		bowl.addButter();
+		bowl.addFlour();
+		bowl.addSugar();
+		bowl.mixIngredients();
+		Oven o = new Oven();
+		o.turnOn();
+		o.putBatterInOven();
+		o.isHot();
+		o.isBaking();
+		bowl.eatCookie(type, o);
 	}
 }
 
@@ -50,18 +50,18 @@ class Oven {
 	}
 
 	void putBatterInOven() {
-		if (!isHot) 
+		if (!isHot)
 			System.out.println("Oven isn't hot yet!!");
 		else {
 			isBaking = true;
 			System.out.println("It's starting to smell really great!");
 		}
 	}
-	
+
 	boolean isHot() {
 		return isHot;
 	}
-	
+
 	boolean isBaking() {
 		return isBaking;
 	}
@@ -113,6 +113,3 @@ class MixingBowl {
 	}
 
 }
-
-
-
