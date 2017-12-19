@@ -1,6 +1,8 @@
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,7 +16,10 @@ import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
 
-public class GetLatestTweet {
+public class GetLatestTweet implements ActionListener {
+	JTextField jtf1 = new JTextField(15);
+	JTextPane jtp1 = new JTextPane();
+
 	public static void main(String[] args) {
 		GetLatestTweet glt = new GetLatestTweet();
 	}
@@ -26,15 +31,14 @@ public class GetLatestTweet {
 		JPanel jp2 = new JPanel();
 		jf1.add(jp1, BorderLayout.NORTH);
 		jf1.add(jp2, BorderLayout.CENTER);
-		JTextField jtf1 = new JTextField(15);
 		JButton jb1 = new JButton();
 		jp1.add(jtf1);
 		jp1.add(jb1);
-		JTextPane jtp1 = new JTextPane();
 		jtp1.setPreferredSize(new Dimension(200, 200));
 		jp2.add(jtp1);
 		jb1.setText("Get Tweet");
 		jf1.pack();
+		jb1.addActionListener(this);
 	}
 
 	private String getLatestTweet(String searchingFor) {
@@ -48,10 +52,22 @@ public class GetLatestTweet {
 		Query query = new Query(searchingFor);
 		try {
 			QueryResult result = twitter.search(query);
-			return result.getTweets().get(0).getText();
+			String a = "";
+			for (int i = 0; i<result.getCount(); i++) {
+				a+=result.getTweets().get(i).getText() + "\n\n";
+			}
+			return a;
 		} catch (Exception e) {
 			System.err.print(e.getMessage());
 			return "What the heck is that?";
 		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		String s = jtf1.getText();
+		String f = getLatestTweet(s);
+		jtp1.setText(f);
 	}
 }
