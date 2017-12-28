@@ -1,4 +1,5 @@
 // Copyright The League of Amazing Programmers, 2015
+import java.awt.BorderLayout;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,7 +8,9 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.decoder.JavaLayerException;
@@ -26,7 +29,8 @@ public class Jukebox implements Runnable {
 
 		// 3. Find an mp3 on your computer or on the Internet.
 		// 4. Create a Song
-
+new Song ("sweden1.mp3");
+new Song ("sweden2.mp3");
 		// 5. Play the Song
 
 		/*
@@ -36,6 +40,17 @@ public class Jukebox implements Runnable {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+JFrame jf1 = new JFrame();
+jf1.setVisible(true);
+JPanel jp1 = new JPanel(new BorderLayout());
+JPanel jp2 = new JPanel();
+jf1.add(jp1);
+jf1.add(jp2);
+JLabel jl1 = new JLabel();
+loadImage("sweden1image");
+JLabel jl2 = new JLabel();
+loadImage("sweden2image");
+
           }
 	/* Use this method to add album covers to your Panel. */
 	private JLabel loadImage(String fileName) {
