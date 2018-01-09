@@ -1,5 +1,7 @@
 // Copyright The League of Amazing Programmers, 2015
 import java.awt.BorderLayout;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,18 +21,22 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 /* 1. Download the JavaZoom jar from here: http://bit.ly/javazoom
  * 2. Right click your project and add it as an External JAR (Under Java Build Path > Libraries).*/
 
-public class Jukebox implements Runnable {
+public class Jukebox implements Runnable, MouseListener {
 
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Jukebox());
 	}
-
+	Song WaterDrum=new Song ("sweden1.mp3");
+	Song Techno=new Song ("sweden2.mp3");
+	JFrame jf1 = new JFrame();
+	JPanel jp1 = new JPanel();
+	JPanel jp2 = new JPanel();
+	JPanel jp3 = new JPanel();
            public void run() {
 
 		// 3. Find an mp3 on your computer or on the Internet.
 		// 4. Create a Song
-new Song ("sweden1.mp3");
-new Song ("sweden2.mp3");
+
 		// 5. Play the Song
 
 		/*
@@ -40,16 +46,15 @@ new Song ("sweden2.mp3");
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
-JFrame jf1 = new JFrame();
+jp1.add(loadImage ("WaterDrum.jpg"));
+jp2.add(loadImage ("Techno.jpg"));
+jp3.add(jp1);
+jp3.add(jp2);
+jf1.add(jp3);
 jf1.setVisible(true);
-JPanel jp1 = new JPanel(new BorderLayout());
-JPanel jp2 = new JPanel();
-jf1.add(jp1);
-jf1.add(jp2);
-JLabel jl1 = new JLabel();
-loadImage("sweden1image");
-JLabel jl2 = new JLabel();
-loadImage("sweden2image");
+jp1.addMouseListener(this);
+jp2.addMouseListener(this);
+jf1.pack();
 
           }
 	/* Use this method to add album covers to your Panel. */
@@ -57,6 +62,47 @@ loadImage("sweden2image");
 		URL imageURL = getClass().getResource(fileName);
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		 
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if (e.getComponent() ==jp1) {
+			WaterDrum.play();
+			Techno.stop();
+		}
+		else if (e.getComponent()==jp2) {
+			Techno.play();
+			WaterDrum.stop();
+		}
+		else {
+			WaterDrum.stop();
+			Techno.stop();
+			
+		}
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
