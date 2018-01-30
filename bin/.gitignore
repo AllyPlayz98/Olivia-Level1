@@ -1,3 +1,4 @@
+/.DS_Store
 /1stsongalbumcover.png
 /2ndsongalbumcover.png
 /Arrays.class
@@ -7,6 +8,7 @@
 /BakingCookies.class
 /BookOfIllusions.class
 /ButtonListener.class
+/Candyman.class
 /Cat.class
 /ChuckleClicker.class
 /CookieType.class
@@ -21,7 +23,6 @@
 /Jukebox.class
 /LandOfTurtles.class
 /LotteryNumbers.class
-/MakingATaco.class
 /MixingBowl.class
 /Movie.class
 /MyJFrame.class
@@ -31,6 +32,7 @@
 /Pencil.class
 /PhotoQuiz.class
 /Ruler.class
+/SensitiveKeyboard.class
 /SimonSays.class
 /Song$1.class
 /Song.class
@@ -52,5 +54,5 @@
 /sweden2.mp3
 /twitter4j-core-3.0.5.jar
 /up.png
-/SensitiveKeyboard.class
-/Candyman.class
+/NBAScoreboard.class
+/NBAController.class
