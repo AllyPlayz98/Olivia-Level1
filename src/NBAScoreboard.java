@@ -1,3 +1,4 @@
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 
@@ -53,6 +54,9 @@ public class NBAScoreboard {
 		jba1.setOpaque(true);
 		jba1.setBackground(new Color(153, 000, 238));
 		jf1.pack();
+	}
 
+	public void sethsv() {
+		this.hsv++;
 	}
 }
