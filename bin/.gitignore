@@ -21,7 +21,6 @@
 /HeyHeyRunner.class
 /Jeopardy.class
 /Jukebox.class
-/LandOfTurtles.class
 /LotteryNumbers.class
 /MixingBowl.class
 /Movie.class
@@ -30,6 +29,8 @@
 /NBAScoreboard.class
 /NetflixQueue.class
 /NetflixRunner.class
+/OlympicAthlete.class
+/Olympics.class
 /Oven.class
 /Pencil.class
 /PhotoQuiz.class
@@ -57,6 +58,3 @@
 /sweden2.mp3
 /twitter4j-core-3.0.5.jar
 /up.png
-/Olympics.class
-/Athletes.class
-/OlympicAthlete.class
