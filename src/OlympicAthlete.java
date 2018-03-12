@@ -20,4 +20,22 @@ public class OlympicAthlete {
 	void setBronze(int bnum) {
 		this.bronze = bnum;
 	}
+	String getName(){
+		return name;
+	}
+	String getCountry() {
+		return country;
+	}
+	String getSport() {
+		return sport;
+	}
+	int getGold() {
+		return gold;
+	}
+	int getSilver() {
+		return silver;
+	}
+	int getBronze() {
+		return bronze;
+	}
 }
