@@ -3,11 +3,16 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class ColoredButtonsRunner implements ActionListener {
 	JFrame jf1;
 	JPanel jp1;
+	JButton b1;
+	JButton b2;
+	JButton b3;
+	JButton b4;
 
 	public static void main(String[] args) {
 		ColoredButtonsRunner cbr = new ColoredButtonsRunner();
@@ -22,10 +27,10 @@ public class ColoredButtonsRunner implements ActionListener {
 		jp1 = new JPanel();
 		jf1.add(jp1);
 		ColoredButton cb = new ColoredButton();
-		JButton b1 = cb.getNewButton();
-		JButton b2 = cb.getNewButton();
-		JButton b3 = cb.getNewButton();
-		JButton b4 = cb.getNewButton();
+		b1 = cb.getNewButton();
+		b2 = cb.getNewButton();
+		b3 = cb.getNewButton();
+		b4 = cb.getNewButton();
 		jp1.add(b1);
 		jp1.add(b2);
 		jp1.add(b3);
@@ -43,5 +48,6 @@ public class ColoredButtonsRunner implements ActionListener {
 		// TODO Auto-generated method stub
 		jf1.dispose();
 		drawButtons();
+		JOptionPane.showMessageDialog(null, "Your colord were ");
 	}
 }

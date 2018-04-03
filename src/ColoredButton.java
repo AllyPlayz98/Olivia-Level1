@@ -6,7 +6,7 @@ import javax.swing.JButton;
 
 public class ColoredButton {
 	Random ran = new Random();
-	Color c;;
+	Color c;
 
 	private Color getRandomColor() {
 		int i = ran.nextInt(4);
@@ -28,5 +28,9 @@ public class ColoredButton {
 		jb1.setPreferredSize(new Dimension(100, 100));
 		jb1.setOpaque(true);
 		return jb1;
+	}
+
+	public Color getColor() {
+		return c;
 	}
 }
