@@ -18,6 +18,11 @@ public class ColoredButtonsRunner implements ActionListener {
 		ColoredButtonsRunner cbr = new ColoredButtonsRunner();
 	}
 
+	ColoredButton cb1;
+	ColoredButton cb2;
+	ColoredButton cb3;
+	ColoredButton cb4;
+
 	public ColoredButtonsRunner() {
 		drawButtons();
 	}
@@ -26,11 +31,14 @@ public class ColoredButtonsRunner implements ActionListener {
 		jf1 = new JFrame();
 		jp1 = new JPanel();
 		jf1.add(jp1);
-		ColoredButton cb = new ColoredButton();
-		b1 = cb.getNewButton();
-		b2 = cb.getNewButton();
-		b3 = cb.getNewButton();
-		b4 = cb.getNewButton();
+		cb1 = new ColoredButton();
+		cb2 = new ColoredButton();
+		cb3 = new ColoredButton();
+		cb4 = new ColoredButton();
+		b1 = cb1.getNewButton();
+		b2 = cb2.getNewButton();
+		b3 = cb3.getNewButton();
+		b4 = cb4.getNewButton();
 		jp1.add(b1);
 		jp1.add(b2);
 		jp1.add(b3);
@@ -48,6 +56,7 @@ public class ColoredButtonsRunner implements ActionListener {
 		// TODO Auto-generated method stub
 		jf1.dispose();
 		drawButtons();
-		JOptionPane.showMessageDialog(null, "Your colord were ");
+		JOptionPane.showMessageDialog(null, "Your colors were " + cb1.getColor() + ", " + cb2.getColor() + ", "
+				+ cb3.getColor() + ", and " + cb4.getColor() + ".");
 	}
 }

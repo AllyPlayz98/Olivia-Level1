@@ -7,16 +7,21 @@ import javax.swing.JButton;
 public class ColoredButton {
 	Random ran = new Random();
 	Color c;
+	String color;
 
 	private Color getRandomColor() {
 		int i = ran.nextInt(4);
 		if (i == 0) {
+			color = "Orange";
 			return Color.ORANGE;
 		} else if (i == 1) {
+			color = "Blue";
 			return Color.BLUE;
 		} else if (i == 2) {
+			color = "Yellow";
 			return Color.YELLOW;
 		} else {
+			color = "Red";
 			return Color.RED;
 		}
 	}
@@ -30,7 +35,7 @@ public class ColoredButton {
 		return jb1;
 	}
 
-	public Color getColor() {
-		return c;
+	public String getColor() {
+		return color;
 	}
 }
