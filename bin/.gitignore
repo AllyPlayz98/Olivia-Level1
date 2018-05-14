@@ -31,7 +31,6 @@
 /MyJFrame.class
 /NBAController.class
 /NBAScoreboard.class
-/NetflixQueue.class
 /Oven.class
 /Pencil.class
 /Ruler.class
@@ -54,7 +53,10 @@
 /sweden2.mp3
 /twitter4j-core-3.0.5.jar
 /up.png
+/NetflixQueue.class
 /NetflixRunner.class
+/NoisyPet.class
+/NoisyPetRunner.class
 /OlympicAthlete.class
 /Olympics.class
 /PhotoQuiz.class
@@ -63,5 +65,4 @@
 /TypingTutor.class
 /WhackAMole.class
 /catRunner.class
-/NoisyPet.class
-/NoisyPetRunner.class
+/BianaryConverter.class
